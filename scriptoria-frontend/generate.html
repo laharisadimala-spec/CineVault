@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate - Scriptoria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/generate.js?v=2000"></script>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="logo">🎬 Scriptoria</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="generate.html" class="active">Generate</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section class="generate-wrapper">
+    <div class="generate-container">
+
+        <h2>✨ AI Script Generator</h2>
+
+        <!-- Script Input -->
+        <textarea id="idea" placeholder="Describe your film idea..."></textarea>
+
+        <!-- Genre -->
+        <div class="row">
+            <select id="genre">
+                <option value="Drama">Drama</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Horror">Horror</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="text" id="customGenre" placeholder="Type custom genre">
+        </div>
+
+        <!-- Feature Buttons (ONLY ONCE) -->
+        <div class="feature-buttons">
+
+            <button id="screenplayBtn" class="btn-primary full">
+                📝 Generate Screenplay
+            </button>
+
+            <button id="characterBtn" class="btn-secondary full">
+                👤 Generate Characters
+            </button>
+
+            <button id="breakdownBtn" class="btn-secondary full">
+                🎬 Generate Scene Breakdown
+            </button>
+
+            <button id="soundBtn" class="btn-secondary full">
+                🎧 Generate Sound Design
+            </button>
+
+        </div>
+
+        <!-- Results -->
+        <div id="screenplayResult" class="result-box"></div>
+        <div id="characterResult" class="result-box"></div>
+        <div id="sceneResult" class="result-box"></div>
+        <div id="soundResult" class="result-box"></div>
+
+        <hr>
+
+        <!-- Budget -->
+        <h3>💰 Budget Planner</h3>
+        <input type="number" id="budgetInput" placeholder="Enter estimated budget">
+        <button id="budgetBtn" class="btn-outline full">
+            Optimize Budget
+        </button>
+        <p id="budgetResult"></p>
+
+        <hr>
+
+        <!-- Team -->
+        <h3>🤝 Invite Team Members</h3>
+        <div class="team-input">
+            <input type="email" id="emailInput" placeholder="Enter team member email">
+            <button id="inviteBtn">Invite</button>
+        </div>
+
+        <ul id="teamList"></ul>
+
+    </div>
+</section>
+
+</body> <script>
+console.log("Generate page loaded");
+</script>
+</html>

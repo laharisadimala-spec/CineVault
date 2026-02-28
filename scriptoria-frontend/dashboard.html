@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Scriptoria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/generate.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="logo">🎬 Scriptoria</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Logout</a>
+    </nav>
+</header>
+
+<section class="dashboard">
+
+    <h2>Start with an Idea 🧠</h2>
+
+    <textarea id="idea" placeholder="Describe your film idea..."></textarea>
+
+    <h3>Select Genre 🎭</h3>
+    <select id="genre">
+        <option>Drama</option>
+        <option>Comedy</option>
+        <option>Horror</option>
+        <option>Sci-Fi</option>
+        <option>Action</option>
+        <option value="other">Other</option>
+    </select>
+
+    <input type="text" id="otherGenre" placeholder="Enter custom genre" style="display:none;">
+
+    <h3>Select Tone 🎨</h3>
+    <select id="tone">
+        <option>Dark</option>
+        <option>Emotional</option>
+        <option>Lighthearted</option>
+        <option>Epic</option>
+    </select>
+
+    <button onclick="generateScript()" class="btn-primary">Generate Screenplay ✨</button>
+
+    <div id="output"></div>
+
+    <hr>
+
+    <h3>Budget Planner 💰</h3>
+    <input type="number" id="budgetInput" placeholder="Enter estimated budget">
+    <button onclick="calculateBudget()">Optimize Budget 📊</button>
+    <p id="budgetResult"></p>
+
+    <hr>
+
+    <h3>Collaborative Workspace 🤝</h3>
+    <input type="text" id="teamMember" placeholder="Add team member name">
+    <button onclick="addMember()">Add</button>
+    <ul id="teamList"></ul>
+
+</section>
+
+</body>
+</html>
